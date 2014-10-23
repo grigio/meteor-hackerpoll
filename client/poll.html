@@ -1,0 +1,39 @@
+<template name="poll">
+  <div class="poll row">
+
+    <div class="col-sm-6">
+       <h2>{{ poll.question }}</h2>
+       
+       {{#each addKeys poll.answers }}
+       <p>
+        <span class="js-increment-btn btn btn-default btn-lg"
+        data-id="{{ poll.index }}-{{ key }}">
+          {{ value }}</span>
+          <span style="float:right;">
+          {{ answerCounterPerc index }}%</span>
+          <div class="progress progress-striped">
+            <div class="progress-bar" style="width: {{ answerCounterPerc index }}%;
+            background-color:{{ color key }};">
+            </div>
+          </div>
+       </p>
+       {{/each }}
+
+    </div>
+
+    <div class="col-sm-6">
+    <h3>{{ totalVotes }} Voti</h3>
+     {{#each votes}}
+      <span class="glyphicon
+        {{#if selected}}
+          glyphicon-user
+        {{ else }}
+          glyphicon-ok
+        {{/if}}
+      " style="color:{{ color answer }};">
+      </span>
+     {{/each }}
+    </div>
+
+  </div> <!-- poll row -->
+</template>

@@ -1,0 +1,11 @@
+{
+  "public": {
+    "ga": {
+      "account":"UA-xx-xx",
+      "cookieDomain": "hxxxxx.com",
+      "trackInterests": true,
+      "trackInPage": true
+    },
+    "hipchatURL": "https://www.hipchat.com/invite/xxxxx/12121212121212121212121212121212"
+  }
+}

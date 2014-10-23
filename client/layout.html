@@ -1,0 +1,33 @@
+<head>
+  <title>Meteor HackerPoll</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+  <meta http-equiv="cleartype" content="on">
+</head>
+
+<body>
+  <div class="container">
+    {{> header }}
+    {{> poll }}
+  </div>
+</body>
+
+<template name="header">
+  <div class="header header-fixed">
+
+    <div class="loading">
+      <i class="glyphicon glyphicon-cog rotating"></i> Caricamento..
+    </div>
+
+    <div class="row" style="z-index:999;">
+      <div class="container" style="height: 20px;">
+        <div class="navbar">
+          <span class="navbar-brand" href="#">Meteor HackerPoll</span>
+
+        </div>
+      </div>
+    </div>
+      
+  </div> <!-- header -->
+</template>
