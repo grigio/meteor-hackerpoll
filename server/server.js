@@ -12,7 +12,10 @@ Meteor.publish("app-state", function () {
 });
 
 // Admin CLI - server
-var adminKey = 'segretold';
+var adminKey = Meteor.settings.adminKey;
+if (! Meteor.settings.adminKey)
+  throw new Meteor.Error(500, "missing `adminKey`, did you set it in --settings settings.json ?");
+
 Meteor.methods({
   next: function(key) {
     if (adminKey !== key)
