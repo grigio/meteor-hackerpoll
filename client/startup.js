@@ -33,11 +33,13 @@ Deps.autorun(function () {
 previous = function () {
   Meteor.call('previous', localStorage.adminKey, function (err,res) {
     if (err) console.log(err.message);
+    console.log(AppState.find({}).fetch()[0].currentPoll_id);
   });
 }
 next = function () {
   Meteor.call('next', localStorage.adminKey, function (err,res) {
     if (err) console.log(err.message);
+    console.log(AppState.find({}).fetch()[0].currentPoll_id);
   });
 }
 votesReset = function () {
