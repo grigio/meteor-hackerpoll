@@ -1,3 +1,7 @@
 .progress {
   height:6px;
 }
+
+.btn {
+  white-space: normal;
+}
